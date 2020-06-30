@@ -1,0 +1,11 @@
+.icon{
+    width: 16px;
+}
+.tree{
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+.select-icon{
+    width: 30px;
+}

@@ -1,0 +1,10 @@
+<ng-container *ngFor="let item of expandData">
+<div [ngStyle]="{'padding-left': item.depth * 20 + 'px'}" class="tree">
+    <img class="icon" src="../assets/image/jiahao.png" *ngIf="!item.isLastLeaf && !item.expand" alt="" (click)="changeNodeStatus(item)">
+    <img class="icon" src="../assets/image/jianhao.png" *ngIf="!item.isLastLeaf && item.expand" alt="" (click)="changeNodeStatus(item)">
+    <span>{{item.name}}</span>
+    <img class="select-icon" src="../assets/image/select.png" *ngIf="item.selectStatus == 2" alt="" (click)="changeSelectStatus(item)">
+    <img class="select-icon" src="../assets/image/un_select.png" *ngIf="item.selectStatus == 0" alt="" (click)="changeSelectStatus(item)">
+    <img class="select-icon" src="../assets/image/half_select.png" *ngIf="item.selectStatus == 1" alt="" (click)="changeSelectStatus(item)">
+  </div>
+</ng-container>
